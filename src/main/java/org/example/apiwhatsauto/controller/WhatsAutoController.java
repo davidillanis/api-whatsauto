@@ -13,12 +13,14 @@ public class WhatsAutoController {
     public Map<String, String> handleMessage(
             @RequestParam("app") String appName,
             @RequestParam("sender") String sender,
-            @RequestParam("message") String message) {
+            @RequestParam("message") String message,
+            @RequestParam("group_name") String groupName,
+            @RequestParam("phone") String phone) {
 
         // Crear la respuesta
+        System.out.println(appName+sender+message+groupName+phone);
         Map<String, String> response = new HashMap<>();
         response.put("reply", "Hello " + sender + ", we received your message: " + message);
-
         return response;
     }
 

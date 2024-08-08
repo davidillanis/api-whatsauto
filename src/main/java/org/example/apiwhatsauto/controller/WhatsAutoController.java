@@ -14,8 +14,8 @@ public class WhatsAutoController {
             @RequestParam("app") String appName,
             @RequestParam("sender") String sender,
             @RequestParam("message") String message,
-            @RequestParam("group_name") String groupName,
-            @RequestParam("phone") String phone) {
+            @RequestParam(value = "group_name", required = false) String groupName,
+            @RequestParam(value = "phone", required = false) String phone) {
 
         // Crear la respuesta
         System.out.println(appName+sender+message+groupName+phone);

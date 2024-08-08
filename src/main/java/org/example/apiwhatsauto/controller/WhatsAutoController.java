@@ -21,4 +21,14 @@ public class WhatsAutoController {
 
         return response;
     }
+
+    @PostMapping(value = "/mess", consumes = "application/x-www-form-urlencoded")
+    public Map<String, String> methodPost() {
+
+        // Crear la respuesta
+        Map<String, String> response = new HashMap<>();
+        response.put("reply", "Hello this is post");
+
+        return response;
+    }
 }
